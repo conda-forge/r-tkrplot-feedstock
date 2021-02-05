@@ -3,7 +3,7 @@ About r-tkrplot
 
 Home: https://CRAN.R-project.org/package=tkrplot
 
-Package license: GPL
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tkrplot-feedstock/blob/master/LICENSE.txt)
 
