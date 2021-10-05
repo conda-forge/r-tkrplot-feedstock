@@ -1,4 +1,4 @@
-{% set version = "0.0-25" %}
+{% set version = "0.0-26" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tkrplot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tkrplot/tkrplot_{{ version }}.tar.gz
-  sha256: 21ae0e869e024838b9bf42a0c06d55672a2683453dc9218327409086a611ed5c
+  sha256: dd66264c2553f6927aff297c6b1c3b61867d6c63aec080f40a1e9d53cfc9d120
 
 build:
   merge_build_host: true  # [win]
