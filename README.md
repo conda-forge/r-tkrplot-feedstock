@@ -3,6 +3,7 @@ About r-tkrplot-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tkrplot-feedstock/blob/main/LICENSE.txt)
 
+
 About r-tkrplot
 ---------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=tkrplot
 Package license: GPL-2.0-or-later
 
 Summary: Simple mechanism for placing R graphics in a Tk widget.
+
 About r-tkrplot
 ---------------
 
