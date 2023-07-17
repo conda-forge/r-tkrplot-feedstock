@@ -41,7 +41,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "print(.Platform\$dynlib.ext);library('tkrplot')"           # [not win]
+    - $R -e "library('tkrplot')"           # [not win]
     - "\"%R%\" -e \"library('tkrplot')\""  # [win]
 
 about:
