@@ -13,7 +13,7 @@ source:
   sha256: c99211919414400b0f579e1354407f2e154cfe85533d324bcf9c68172c2772a5
 
 build:
-  skip: True  # [osx and r_base < 43]
+  skip: True  # [osx and r_base != "4.3"]
   merge_build_host: true  # [win]
   number: 1
   rpaths:
