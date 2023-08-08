@@ -22,8 +22,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win] 
-    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('c') }}          # [not win] 
+    - {{ compiler('m2w64_c') }}    # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}sed               # [win]
     - {{ posix }}grep              # [win]
@@ -36,6 +36,7 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - {{ native }}tk
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
