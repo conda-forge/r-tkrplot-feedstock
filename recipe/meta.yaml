@@ -15,15 +15,15 @@ source:
 build:
   skip: True  # [osx and r_base != "4.3"]
   merge_build_host: true  # [win]
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win] 
-    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('c') }}          # [not win] 
+    - {{ compiler('m2w64_c') }}    # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}sed               # [win]
     - {{ posix }}grep              # [win]
@@ -36,9 +36,12 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - tk                           # [not win]
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
+    - {{ native }}tcl              # [win]
+    - {{ native }}tk               # [win]
 
 test:
   commands:
@@ -51,21 +54,9 @@ about:
   summary: Simple mechanism for placing R graphics in a Tk widget.
   license_family: GPL
   license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-
-# Package: tkrplot
-# Version: 0.0-24
-# Author: Luke Tierney <luke-tierney@uiowa.edu>
-# Description: Simple mechanism for placing R graphics in a Tk widget.
-# Title: TK Rplot
-# Depends: R (>= 2.13), grDevices, tcltk
-# License: GPL
-# Maintainer: Luke Tierney <luke-tierney@uiowa.edu>
-# NeedsCompilation: yes
-# Packaged: 2018-07-19 15:46:12 UTC; luke
-# Repository: CRAN
-# Date/Publication: 2018-07-19 20:40:03 UTC
