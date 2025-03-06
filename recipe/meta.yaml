@@ -1,4 +1,4 @@
-{% set version = "0.0-27" %}
+{% set version = "0.0-29" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tkrplot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tkrplot/tkrplot_{{ version }}.tar.gz
-  sha256: c99211919414400b0f579e1354407f2e154cfe85533d324bcf9c68172c2772a5
+  sha256: 9ffd07b6d9ba25c9920948b98c219378ec68a4dd9c9665cf78aff819090e7729
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
